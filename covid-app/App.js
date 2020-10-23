@@ -1,13 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Home from './components/Home';
+import Information from './components/Information';
+import Search from './components/Search';
+
+
+const Tab = createMaterialTopTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Search" component={Search} />
+        <Tab.Screen name="Information" component={Information} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
