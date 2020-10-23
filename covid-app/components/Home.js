@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { Button, View, StyleSheet, Text } from 'react-native'
 
 class Home extends React.Component {
 
@@ -11,6 +11,10 @@ class Home extends React.Component {
         return (
             <View style={styles.screen}>
                 <Text>Homescreen</Text>
+                <Button
+                    title="Search"
+                    onPress={() => this.props.navigation.navigate('Search')}
+                />
             </View>
         )
     }
