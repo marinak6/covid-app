@@ -16,7 +16,8 @@ class Search extends React.Component {
             madeSelection: false,
             fips: "",
             display: false,
-            source:""
+            source:"",
+            enoughCountyData:false
         }
     }
 
@@ -74,28 +75,55 @@ class Search extends React.Component {
 
     displayThings(){
         const {fips} = this.state
+        const data = countyStats[fips]
+
         const source = require("../prediction_graphs/" + fips + ".png")
         this.setState({
             source: source,
-            display: true
+            display: true,
+            enoughCountyData: data['count'] >= 100
         })
     }
 
     getNegative(){
         const {fips} = this.state
-        const data = countyStats[fips]
+        const {enoughCountyData} = this.state
+        var stateFips = String(fips).substring(0,2)
+        var data = ""
+        if (enoughCountyData){
+            data = countyStats[fips]
+        }
+        else{
+            data = stateStats[stateFips]
+        }
         const string = "negative count: " + data['negative']
         return string
     }
     getPositive(){
         const {fips} = this.state
-        const data = countyStats[fips]
+        const {enoughCountyData} = this.state
+        var stateFips = String(fips).substring(0,2)
+        var data = ""
+        if (enoughCountyData){
+            data = countyStats[fips]
+        }
+        else{
+            data = stateStats[stateFips]
+        }        
         const string = "positive count: " + data['positive']
         return string
     }
     getNeutral(){
         const {fips} = this.state
-        const data = countyStats[fips]
+        const {enoughCountyData} = this.state
+        var stateFips = String(fips).substring(0,2)
+        var data = ""
+        if (enoughCountyData){
+            data = countyStats[fips]
+        }
+        else{
+            data = stateStats[stateFips]
+        }        
         const string = "neutral count: " + data['neutral']
         return string
     }
@@ -103,6 +131,7 @@ class Search extends React.Component {
     render() {
         const { query } = this.state;
         const { madeSelection } = this.state;
+        const {enoughCountyData} = this.state;
         const { source } = this.state;
         const { display } = this.state;
         console.log(query)
@@ -173,6 +202,8 @@ class Search extends React.Component {
                     </View>
 
                     <Text style={styles.titleText}> {query} Twitter Sentiment</Text>
+                    {!enoughCountyData && <Text style={{margin:10}}>Displaying statewide data, not enought data for {query}</Text>}
+                    
                     <View style={styles.sideBySide}>
                         <View style={styles.negative}>
                             <Text style={styles.titleText}>{this.getNegative()}</Text>
