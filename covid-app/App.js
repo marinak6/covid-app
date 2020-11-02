@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator tabBarOptions={{
-        labelStyle: { fontSize: 12 },
+        labelStyle: { fontSize: 12, fontFamily: 'Avenir Next' },
         activeTintColor: '#339172',
         indicatorStyle: { backgroundColor: '#3aba8f' },
         style: { color: 'white' },

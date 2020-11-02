@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
 
     },
     welcomeTitle: {
-        fontFamily: 'AlNile-Bold',
+        fontFamily: 'Avenir Book',
         fontSize: 70,
-        fontWeight: "bold",
+        fontWeight: 'bold',
         marginTop: -100
     },
     subtitle: {
-        fontFamily: 'AlNile-Bold',
+        fontFamily: 'Avenir Next',
         fontSize: 30,
     },
     container: {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         width: 200
     },
     buttonText: {
-        fontFamily: 'AlNile-Bold',
+        fontFamily: 'Avenir Next',
         color: 'white',
         fontSize: 30
     },
