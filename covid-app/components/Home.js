@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, View, StyleSheet, Text } from 'react-native'
+import { TouchableOpacity, View, StyleSheet, Text, Dimensions } from 'react-native'
 
 class Home extends React.Component {
 
@@ -9,17 +9,21 @@ class Home extends React.Component {
 
     render() {
         return (
-            <View style={styles.screen}>
-                <Text>Homescreen</Text>
-                <Button
-                    title="Search"
+            <View style={styles.container}>
+                <Text style={styles.welcomeTitle}>COVID  Sense</Text>
+                <Text style={styles.subtitle}> Helping you understand trends of COVID-19 in your area.</Text>
+                <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('Search')}
-                />
-            </View>
+                    style={styles.button}
+                >
+                    <Text style={styles.buttonText}>Search</Text>
+                </TouchableOpacity>
+            </View >
         )
     }
 }
 export default Home
+const { height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     screen: {
@@ -29,12 +33,43 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
 
     },
+    welcomeTitle: {
+        fontFamily: 'AlNile-Bold',
+        fontSize: 70,
+        fontWeight: "bold",
+        marginTop: -100
+    },
+    subtitle: {
+        fontFamily: 'AlNile-Bold',
+        fontSize: 30,
+    },
     container: {
         flex: 1,
         height: "100%",
         width: "100%",
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'column',
         backgroundColor: 'white',
-    }
+    },
+    button: {
+        margin: 10,
+        paddingVertical: 5,
+        alignItems: 'center',
+        backgroundColor: '#3aba8f',
+        borderColor: '#3aba8f',
+        borderWidth: 1,
+        borderRadius: 5,
+        marginTop: 50,
+        width: 200
+    },
+    buttonText: {
+        fontFamily: 'AlNile-Bold',
+        color: 'white',
+        fontSize: 30
+    },
+    buttonContainer: {
+        alignItems: 'center', // center buttons within container 
+        marginTop: 30
+    },
 });
