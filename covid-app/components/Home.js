@@ -10,7 +10,7 @@ class Home extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcomeTitle}>COVID  Sense</Text>
+                <Text style={styles.welcomeTitle}>COVID Sense</Text>
                 <Text style={styles.subtitle}> Helping you understand trends of COVID-19 in your area.</Text>
                 <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('Search')}
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 
     },
     welcomeTitle: {
-        fontFamily: 'Avenir Book',
+        fontFamily: 'Avenir',
         fontSize: 70,
         fontWeight: 'bold',
         marginTop: -100
