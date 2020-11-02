@@ -4,6 +4,8 @@ import Autocomplete from 'react-native-autocomplete-input';
 
 
 const countyData = require('../fips_codes.json');
+const countyStats = require('../county_stats.json');
+const stateStats = require('../state_stats.json');
 
 class Search extends React.Component {
 
@@ -77,7 +79,25 @@ class Search extends React.Component {
             source: source,
             display: true
         })
+    }
 
+    getNegative(){
+        const {fips} = this.state
+        const data = countyStats[fips]
+        const string = "negative count: " + data['negative']
+        return string
+    }
+    getPositive(){
+        const {fips} = this.state
+        const data = countyStats[fips]
+        const string = "positive count: " + data['positive']
+        return string
+    }
+    getNeutral(){
+        const {fips} = this.state
+        const data = countyStats[fips]
+        const string = "neutral count: " + data['neutral']
+        return string
     }
 
     render() {
@@ -154,9 +174,15 @@ class Search extends React.Component {
 
                     <Text style={styles.titleText}> {query} Twitter Sentiment</Text>
                     <View style={styles.sideBySide}>
-                        <View style={styles.negative}><Text style={styles.titleText}>Negative</Text></View>
-                        <View style={styles.neutral}><Text style={styles.titleText}>Neutral</Text></View>
-                        <View style={styles.positive}><Text style={styles.titleText}>Positive</Text></View>
+                        <View style={styles.negative}>
+                            <Text style={styles.titleText}>{this.getNegative()}</Text>
+                        </View>
+                        <View style={styles.neutral}>
+                            <Text style={styles.titleText}>{this.getNeutral()}</Text>
+                        </View>
+                        <View style={styles.positive}>
+                            <Text style={styles.titleText}>{this.getPositive()}</Text>
+                        </View>
 
                     </View>
     
@@ -181,8 +207,8 @@ const styles = StyleSheet.create({
         // justifyContent: 'left' //'space-between'
     },
     statsBox:{
-        height: 500,
-        width: 400,
+        height: 300,
+        width: 300,
         borderColor: "grey",
         borderWidth: 5,
         margin: 10
@@ -199,8 +225,9 @@ const styles = StyleSheet.create({
         padding:0
     },
     stretch: {
-        width: 1400,
-        height: 500,
+        // paddingTop: "35.7142857%",
+        width: 840,
+        height: 300,
         margin:10,
         resizeMode: 'stretch',
     },
