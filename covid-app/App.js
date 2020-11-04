@@ -13,14 +13,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator tabBarOptions={{
-        labelStyle: { fontSize: 12, fontFamily: 'Avenir Next' },
+        labelStyle: { fontSize: 16, fontFamily: 'Avenir Next' },
         activeTintColor: '#339172',
         indicatorStyle: { backgroundColor: '#3aba8f' },
         style: { color: 'white' },
       }}>
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Search" component={Search} />
-        <Tab.Screen name="Information" component={Information} />
+        <Tab.Screen name="FAQ" component={Information} />
       </Tab.Navigator>
     </NavigationContainer>
   );
