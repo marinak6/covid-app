@@ -16,26 +16,30 @@ class Information extends React.Component {
                         <Text style={styles.infoTitle}>Infections Model</Text>
                         <View style={styles.faq}>
                             <Text style={styles.question}> What's the accuracy for the model? </Text>
-                            <Paragraph>     • 87% </Paragraph>
+                            <Paragraph>     • Each county has it's own model. The average accuracy is 87%. </Paragraph>
                         </View>
                         <View style={styles.faq}>
                             <Text style={styles.question}> What model are you using? </Text>
-                            <Paragraph>     • ARIMA </Paragraph>
+                            <Paragraph>     • We are using Auto Regressive Integrated Moving Average (ARIMA).</Paragraph>
+                            <Paragraph>     • This is a statistical model that makes predictions based solely on previous values.</Paragraph>
+                            <Paragraph>     • Learn more about it <Text style={styles.link} onPress={() => Linking.openURL("https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/#:~:text=ARIMA%2C%20short%20for%20'Auto%20Regressive,used%20to%20forecast%20future%20values")}>here</Text>!</Paragraph>
                         </View>
                         <View style={styles.faq}>
                             <Text style={styles.question}> What's a confidence interval? </Text>
-                            <Paragraph>     • </Paragraph>
+                            <Paragraph>     • Our graphs show a 95% confidence interval. Essentially, the true value of the number of total COVID-19 cases will fall within that range 95% of the time.</Paragraph>
                         </View>
                         <View style={styles.faq}>
                             <Text style={styles.question}> Where did you get your data for COVID-19 infections</Text>
-                            <Paragraph>     • </Paragraph>
+                            <Paragraph>     • We are using the New York Times COVID-19 dataset.</Paragraph>
+                            <Paragraph>     • Check it out <Text style={styles.link} onPress={() => Linking.openURL("https://github.com/nytimes/covid-19-data")}>here</Text>!</Paragraph>
+
                         </View>
                     </View>
                     <View style={styles.section}>
                         <Text style={styles.infoTitle}>Twitter Analysis</Text>
                         <View style={styles.faq}>
                             <Text style={styles.question}> What's the accuracy for the model? </Text>
-                            <Paragraph>     • 89%</Paragraph>
+                            <Paragraph>     • The model has a validation accuracy of 89%</Paragraph>
                         </View>
                         <View style={styles.faq}>
                             <Text style={styles.question}> What model are you using? </Text>
@@ -43,11 +47,14 @@ class Information extends React.Component {
                         </View>
                         <View style={styles.faq}>
                             <Text style={styles.question}> How did you get the tweets?</Text>
-                            <Paragraph>     • </Paragraph>
+                            <Paragraph>     • The tweets used to train our model were collected through the Twitter API based on a collection of hashtags we determined would be indicative of a tweet's stance on supporting or not supporting guidelines.</Paragraph>
+                            <Paragraph>     • The tweets used to create the statistics seen on the search page are based on geo-tagged, COVID-19 related tweet IDs collected by Rabindra Lamsal, a researcher at the School of Computer and Systems Sciences, JNU, New Delhi. These tweet ids were then rehydrated with the Twitter API.</Paragraph>
+                            <Paragraph>     • The tweet ids can be found <Text style={styles.link} onPress={() => Linking.openURL("https://ieee-dataport.org/open-access/coronavirus-covid-19-geo-tagged-tweets-dataset")}>here</Text>!</Paragraph>
+
                         </View>
                         <View style={styles.faq}>
                             <Text style={styles.question}> Is the tweet sentiment analysis indicative of the area selected? </Text>
-                            <Paragraph>     • </Paragraph>
+                            <Paragraph>     • The results of the tweet analysis cannot be applied to the county in general. This is because only tweets were considered, which is not a true representative sample of the population.</Paragraph>
                         </View>
 
                     </View>
@@ -88,7 +95,7 @@ const styles = StyleSheet.create({
         marginBottom: '3%'
     },
     titleText: {
-        fontFamily: 'Avenir',
+        fontFamily: 'Metropolis-Thin.otf',
         fontSize: 60,
         fontWeight: 'bold',
         alignSelf: 'center',
@@ -96,11 +103,16 @@ const styles = StyleSheet.create({
         marginTop: "3%"
     },
     infoTitle: {
-        fontFamily: 'Avenir',
+        fontFamily: 'Metropolis-Thin.otf',
         fontSize: 30,
         color: "#3aba8f",
         alignSelf: 'center',
         marginBottom: '3%'
+    },
+    link: {
+        fontFamily: 'Metropolis-Thin.otf',
+        color: "#3aba8f",
+        textDecorationLine: 'underline'
     },
     container: {
         flex: 1,

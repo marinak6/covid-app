@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
 
     },
     welcomeTitle: {
-        fontFamily: 'Avenir',
+        fontFamily: 'Metropolis-Thin.otf',
         fontSize: 70,
         fontWeight: 'bold',
         marginTop: -100
     },
     subtitle: {
-        fontFamily: 'Avenir Next',
+        fontFamily: 'Metropolis-Thin.otf',
         fontSize: 30,
     },
     container: {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         width: 200
     },
     buttonText: {
-        fontFamily: 'Avenir Next',
+        fontFamily: 'Metropolis-Thin.otf',
         color: 'white',
         fontSize: 30
     },
