@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
 
     },
     welcomeTitle: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 70,
         fontWeight: 'bold',
         marginTop: -500
     },
     subtitle: {
-        fontFamily: 'Metropolis-Thin.otf',
-        fontSize: 30,
+        fontFamily: 'LibreFranklin-Light.ttf',
+        fontSize: 25,
     },
     container: {
         flex: 1,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         width: 200
     },
     buttonText: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         color: 'white',
         fontSize: 30
     },

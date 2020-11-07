@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         marginBottom: '3%'
     },
     titleText: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 60,
         fontWeight: 'bold',
         alignSelf: 'center',
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
         marginTop: "3%"
     },
     infoTitle: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 30,
         color: "#3aba8f",
         alignSelf: 'center',
         marginBottom: '3%'
     },
     link: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         color: "#3aba8f",
         textDecorationLine: 'underline'
     },

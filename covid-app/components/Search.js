@@ -121,7 +121,7 @@ class Search extends React.Component {
         const { enoughCountyData } = this.state
         var stateFips = String(fips).substring(0, 2)
         var data = ""
-        if (enoughCountyData  && countyStats[fips]) {
+        if (enoughCountyData && countyStats[fips]) {
             data = countyStats[fips]
         }
         else {
@@ -164,7 +164,7 @@ class Search extends React.Component {
                         placeholder="Enter U.S. county"
                         renderItem={({ item, i, separators }) => (
                             <TouchableOpacity key={i} onPress={() => this.onSelect(item)}>
-                                <Text style={{ fontFamily: 'Metropolis-Thin.otf', fontSize: 20 }}>
+                                <Text style={{ fontFamily: 'LibreFranklin-Light.ttf', fontSize: 20 }}>
                                     {item.text}
                                 </Text>
                             </TouchableOpacity>
@@ -198,7 +198,7 @@ class Search extends React.Component {
                         <center>
                             <View style={[styles.sideBySide, { paddingBottom: "3%" }]}>
                                 <Text style={{
-                                    fontFamily: 'Metropolis-Thin.otf',
+                                    fontFamily: 'LibreFranklin-Light.ttf',
                                     fontSize: 40,
                                     fontWeight: 'bold',
                                     textAlign: 'center',
@@ -227,7 +227,7 @@ class Search extends React.Component {
                         <View style={[styles.model, { marginTop: "2%", marginBottom: "3%" }]}>
 
                             <Text style={[styles.infoTitle, { marginTop: "1%" }]}> Twitter Sentiment regarding Support of COVID-19 Guidelines</Text>
-                            {!enoughCountyData && <Text style={{ fontFamily: 'Metropolis-Thin.otf', fontSize: 16 }}>Displaying statewide data, not enought data for {query}</Text>}
+                            {!enoughCountyData && <Text style={{ fontFamily: 'LibreFranklin-Light.ttf', fontSize: 16 }}>Displaying statewide data, not enought data for {query}</Text>}
                             <View style={styles.sideBySide2}>
                                 <View style={[styles.tweetBox, { marginRight: "5%", marginLeft: "10%" }]}>
                                     <Text style={[styles.tweetText, { color: 'green' }]}> Support</Text>
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
         selectionColor: '#3aba8f'
     },
     subtitle: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 35,
     },
     autocompleteInput: {
@@ -287,11 +287,11 @@ const styles = StyleSheet.create({
         maxWidth: 300,
         justifyContent: 'center',
         alignItems: 'center',
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         selectionColor: '#3aba8f'
     },
     titleText: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 50,
         fontWeight: 'bold',
     },
@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
         paddingBottom: "1%"
     },
     tweetText: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 20,
 
     },
@@ -360,7 +360,7 @@ const styles = StyleSheet.create({
         marginBottom: "10%"
     },
     buttonText: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         color: 'white',
         fontSize: 20
     },
@@ -381,8 +381,8 @@ const styles = StyleSheet.create({
         //width: '50%',
         //width: 1000,
         //height: 500,
-        width: Dimensions.get('window').width/1.5,
-        height: Dimensions.get('window').width/3,
+        width: Dimensions.get('window').width / 1.5,
+        height: Dimensions.get('window').width / 3,
         margin: 0,
         resizeMode: 'stretch',
     },
@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
         marginBottom: "2%"
     },
     infoTitle: {
-        fontFamily: 'Metropolis-Thin.otf',
+        fontFamily: 'LibreFranklin-Light.ttf',
         fontSize: 27,
         textAlign: 'center',
         color: "#3aba8f"
