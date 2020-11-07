@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
-        marginTop: '-25%'
+        marginTop: '-50%'
     },
     autocompleteStyle: {
         borderColor: '#3aba8f',

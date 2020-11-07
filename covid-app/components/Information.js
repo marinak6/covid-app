@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     },
     faqsection: {
         display: 'flex',
-        width: "60%",
+        width: "90%",
         height: "100%",
         flexDirection: 'column',
         backgroundColor: 'white',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
     section: {
         display: 'flex',
-        width: "50%",
+        width: "60%",
         flexDirection: 'column',
         backgroundColor: 'white',
         justifyContent: 'center',

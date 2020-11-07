@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Metropolis-Thin.otf',
         fontSize: 70,
         fontWeight: 'bold',
-        marginTop: -100
+        marginTop: -500
     },
     subtitle: {
         fontFamily: 'Metropolis-Thin.otf',
