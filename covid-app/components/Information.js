@@ -10,6 +10,7 @@ class Information extends React.Component {
     render() {
         return (
             <View style={styles.screen}>
+                <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
                 <View style={styles.faqsection}>
                     <Text style={styles.titleText}>FAQ</Text>
                     <View style={styles.section}>
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
         marginBottom: '3%'
     },
     titleText: {
-        fontFamily: 'LibreFranklin-Light.ttf',
+        fontFamily: 'Libre Franklin',
         fontSize: 60,
         fontWeight: 'bold',
         alignSelf: 'center',
@@ -103,14 +104,14 @@ const styles = StyleSheet.create({
         marginTop: "3%"
     },
     infoTitle: {
-        fontFamily: 'LibreFranklin-Light.ttf',
+        fontFamily: 'Libre Franklin',
         fontSize: 30,
         color: "#3aba8f",
         alignSelf: 'center',
         marginBottom: '3%'
     },
     link: {
-        fontFamily: 'LibreFranklin-Light.ttf',
+        fontFamily: 'Libre Franklin',
         color: "#3aba8f",
         textDecorationLine: 'underline'
     },

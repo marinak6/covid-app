@@ -10,6 +10,8 @@ class Home extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+                <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
                 <Text style={styles.welcomeTitle}>COVID Sense</Text>
                 <Text style={styles.subtitle}> Helping you understand trends of COVID-19 in your area.</Text>
                 <TouchableOpacity
@@ -34,13 +36,13 @@ const styles = StyleSheet.create({
 
     },
     welcomeTitle: {
-        fontFamily: 'LibreFranklin-Light.ttf',
+        fontFamily: 'Libre Franklin',
         fontSize: 70,
-        fontWeight: 'bold',
+        // fontWeight: 'bold',
         marginTop: -500
     },
     subtitle: {
-        fontFamily: 'LibreFranklin-Light.ttf',
+        fontFamily: 'Libre Franklin',
         fontSize: 25,
     },
     container: {
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
         width: 200
     },
     buttonText: {
-        fontFamily: 'LibreFranklin-Light.ttf',
+        fontFamily: 'Libre Franklin',
         color: 'white',
         fontSize: 30
     },
