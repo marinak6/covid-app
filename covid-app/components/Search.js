@@ -146,7 +146,7 @@ class Search extends React.Component {
         console.log(data)
         return (
             <View style={styles.screen}>
-                {!madeSelection && !display && <Text style={[styles.titleText, { marginTop: "15%", marginBottom: "10%" }]}> Analyze COVID-19 trends of U.S. County</Text>}
+                {!madeSelection && !display && <Text style={[styles.titleText, { marginBottom: "10%" }]}> Analyze COVID-19 trends of U.S. County</Text>}
                 {madeSelection && !display && <Text style={styles.titleText}> Analyze COVID-19 trends of U.S. County</Text>}
 
                 {!madeSelection && <View style={styles.container}>
