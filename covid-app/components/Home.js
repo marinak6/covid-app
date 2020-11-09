@@ -9,50 +9,57 @@ class Home extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
-                <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
-                <Text style={styles.welcomeTitle}>COVID Sense</Text>
-                <Text style={styles.subtitle}> Helping you understand trends of COVID-19 in your area.</Text>
-                <TouchableOpacity
-                    onPress={() => this.props.navigation.navigate('Search')}
-                    style={styles.button}
-                >
-                    <Text style={styles.buttonText}>Search</Text>
-                </TouchableOpacity>
-            </View >
+            <View style={styles.screen}>
+                <View style={styles.container}>
+                    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
+                    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
+                    <Text style={styles.welcomeTitle}>COVID Sense</Text>
+                    <Text style={styles.subtitle}> Helping you understand trends of COVID-19 in your area.</Text>
+                    <TouchableOpacity
+                        onPress={() => this.props.navigation.navigate('Search')}
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>Search</Text>
+                    </TouchableOpacity>
+                </View >
+            </View>
         )
     }
 }
 export default Home
-const { height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
-        height: "100%",
+        display: 'flex',
         width: "100%",
         flexDirection: 'column',
+        backgroundColor: 'white',
+        justifyContent: 'start',
+        alignItems: 'center',
 
     },
     welcomeTitle: {
         fontFamily: 'Libre Franklin',
         fontSize: 70,
         // fontWeight: 'bold',
-        marginTop: -500
+        marginTop: 0,
+        height: 'auto',
     },
     subtitle: {
+        marginTop: 20,
         fontFamily: 'Libre Franklin',
         fontSize: 25,
     },
     container: {
-        flex: 1,
-        height: "100%",
+        display: 'flex',
         width: "100%",
-        justifyContent: 'center',
+        justifyContent: 'start',
         alignItems: 'center',
         flexDirection: 'column',
         backgroundColor: 'white',
+        marginTop: "10%"
+
     },
     button: {
         margin: 10,

@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     },
     answer: {
         marginLeft: 25,
+        fontFamily: 'Libre Franklin',
     },
     section: {
         display: 'flex',
@@ -122,7 +123,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     question: {
-
+        fontFamily: 'Libre Franklin',
+        fontWeight: 'bold'
     },
     faq: {
         display: 'flex',
