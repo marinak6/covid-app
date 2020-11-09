@@ -97,7 +97,6 @@ const styles = StyleSheet.create({
     titleText: {
         fontFamily: 'Libre Franklin',
         fontSize: 60,
-        fontWeight: 'bold',
         alignSelf: 'center',
         marginBottom: '2%',
         marginTop: "3%"

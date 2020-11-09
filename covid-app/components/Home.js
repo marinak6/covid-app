@@ -1,6 +1,7 @@
 import React from 'react'
-import { TouchableOpacity, View, StyleSheet, Text, Dimensions } from 'react-native'
+import { TouchableOpacity, View, StyleSheet, Image, Text, Dimensions } from 'react-native'
 
+const source = require("../assets/covid-icon.png")
 class Home extends React.Component {
 
     constructor(props) {
@@ -13,7 +14,10 @@ class Home extends React.Component {
                 <View style={styles.container}>
                     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
                     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet"></link>
-                    <Text style={styles.welcomeTitle}>COVID Sense</Text>
+                    <View style={styles.sideBySide}>
+                        <Text style={styles.welcomeTitle}>COVID Sense</Text>
+                        <Image style={styles.stretch} source={source} />
+                    </View>
                     <Text style={styles.subtitle}> Helping you understand trends of COVID-19 in your area.</Text>
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('Search')}
@@ -39,6 +43,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
     },
+    sideBySide: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: "100%"
+        // justifyContent: 'left' //'space-between'
+    },
     welcomeTitle: {
         fontFamily: 'Libre Franklin',
         fontSize: 70,
@@ -50,6 +61,19 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontFamily: 'Libre Franklin',
         fontSize: 25,
+    },
+    stretch: {
+        //paddingTop: "35.7142857%",
+        // width: 840,
+        //height: 300,
+        //paddingTop: "45%",
+        //width: '50%',
+        //width: 1000,
+        //height: 500,
+        width: 100,
+        height: 100,
+        marginBottom: 30,
+        resizeMode: 'contain',
     },
     container: {
         display: 'flex',

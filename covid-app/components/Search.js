@@ -293,7 +293,6 @@ const styles = StyleSheet.create({
     titleText: {
         fontFamily: 'Libre Franklin',
         fontSize: 50,
-        fontWeight: 'bold',
         marginTop: "10%"
     },
     buttonsDisplay: {
