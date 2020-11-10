@@ -70,9 +70,9 @@ const styles = StyleSheet.create({
         //width: '50%',
         //width: 1000,
         //height: 500,
-        width: 100,
-        height: 100,
-        marginBottom: 30,
+        width: 70,
+        height: 70,
+        marginTop: -80,
         resizeMode: 'contain',
     },
     container: {
